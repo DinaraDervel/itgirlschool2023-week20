@@ -10,7 +10,7 @@
     <div class="wrapper">
       <div id="search">
         <h2>Whom or what are we going to search?</h2>
-        <select id="objectCategory" onchange="onCategoryChange">
+        <select id="objectCategory">
           <option value="0" disabled selected>Choose category</option>
           <option value="people">People</option>
           <option value="planets">Planets</option>
@@ -19,16 +19,12 @@
           <option value="vehicles">Vehicles</option>
           <option value="starships">Starships</option>
         </select>
-        <input
-          id="objectNumber"
-          onchange="onNumberChange"
-          type="number"
-          placeholder="Enter number"
-        />
-        <button id="searchButton" onclick="searchObject">Search</button>
+        <input id="objectNumber" type="number" placeholder="Enter number" />
+        <button id="searchButton">Search</button>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="result-wrapper">
+      <span class="loader hidden"></span>
       <div id="searchResult"></div>
       <div id="searchError"></div>
     </div>
