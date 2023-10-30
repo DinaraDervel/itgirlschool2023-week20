@@ -49,6 +49,7 @@ const getRequest = (url) => {
     catch (err) {
         renderError(err, searchError);
         render('', searchResult);
+        loader.classList.add('hidden');
     }
     finally {
         console.log('Request sent');
